@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B0B9B66-A7C3-4E73-911F-A348664C5985}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>solitario.My.MyApplication</StartupObject>
+    <RootNamespace>solitario</RootNamespace>
+    <AssemblyName>solitario</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>solitario.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>solitario.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="instructions.Designer.vb">
+      <DependentUpon>instructions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="instructions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listings.Designer.vb">
+      <DependentUpon>listings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="listings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewBackDeck.Designer.vb">
+      <DependentUpon>NewBackDeck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewBackDeck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="solitaireDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>solitaireDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="instructions.resx">
+      <DependentUpon>instructions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listings.resx">
+      <DependentUpon>listings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewBackDeck.resx">
+      <DependentUpon>NewBackDeck.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="solitaireDataSet.xsc">
+      <DependentUpon>solitaireDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="solitaireDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>solitaireDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="solitaireDataSet.xss">
+      <DependentUpon>solitaireDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clubs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamonds.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hearts.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spades.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
